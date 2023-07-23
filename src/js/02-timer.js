@@ -8,6 +8,7 @@ const dataHours = document.querySelector('[data-hours]');
 const dataMinutes = document.querySelector('[data-minutes]');
 const dataSeconds = document.querySelector('[data-seconds]');
 const startBtn = document.querySelector('[data-start]');
+startBtn.disabled = true;
 
 let selectedDate = new Date();
 
@@ -34,6 +35,7 @@ let intervalId = null;
 startBtn.addEventListener('click', startTimer);
 
 function startTimer() {
+
   if (selectedDate > new Date()) {
     intervalId = setInterval(() => {
       const startTime = selectedDate.getTime(); 
